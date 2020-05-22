@@ -1,0 +1,28 @@
+@import 'global';
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    border-spacing: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// === megia   =======================
+
+@import 'media';
