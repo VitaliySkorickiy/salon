@@ -1,8 +1,10 @@
 @import 'global';
+@import 'fonts';
 
 
 
-html {
+html,
+body {
     box-sizing: border-box;
 }
 
@@ -11,6 +13,8 @@ html {
 *::after {
     border-spacing: inherit;
 }
+
+
 
 // ============  header  ===============
 
@@ -82,8 +86,105 @@ html {
     }
 }
 
+
+.header__center-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(116, 56, 121);
+
+
+    .logo {
+
+        img {
+            height: 100px;
+        }
+    }
+}
+
+.graf {
+
+    span {
+        display: block;
+        line-height: 30px;
+    }
+
+    .clock {
+
+        &::before {
+            content: "\f017";
+            font-family: 'icomoon';
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .calendar {
+
+        &::before {
+            content: " \f073 ";
+            font-family: 'icomoon';
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
+
+.tel {
+    font-size: 18px;
+
+    a {
+        color: rgb(116, 56, 121);
+
+        display: block;
+        line-height: 30px;
+
+        &::before {
+            content: " \f095 ";
+            font-family: 'icomoon';
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+}
+
+.contacts {
+    span {
+        display: block;
+        line-height: 30px;
+    }
+
+    a {
+        color: rgb(116, 56, 121);
+    }
+
+    .adres {
+        font-size: 18px;
+
+        &::before {
+            content: " \f041 ";
+            font-family: 'icomoon';
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .mail {
+        font-size: 18px;
+
+        &::before {
+            content: " \f0e0 ";
+            font-family: 'icomoon';
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+}
+
+
 .header__down {
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 227, 232);
 
     .container {
         display: flex;
@@ -114,12 +215,122 @@ html {
         }
     }
 }
-.menu__btn{
-    a{
+
+.menu__btn {
+    a {
+        color: rgb(116, 56, 121);
         font-size: 18px;
         padding: 10px;
-        background-color: #ffe5b4;
+        background-color: #f5abd7;
         border-radius: 8px;
+    }
+}
+
+
+// ====   slider  ============
+
+.slider__item {
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+//    ===========  about  ===========
+
+.about {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)), url(../img/bgabout.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about__wrapper {
+    padding: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    max-width: 30%;
+    position: relative;
+
+    .img__title {
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        font-size: 20px;
+        top: 277px;
+    }
+
+    &-img {
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &-text {
+        margin-top: 10px;
+        line-height: 25px;
+        color: #000;
+        opacity: .8;
+        padding: 5px;
+        min-height: 220px;
+    }
+
+    .about__item-btn {
+        background-color: rgb(116, 56, 121);
+        text-align: center;
+
+        a {
+            color: #fff;
+            padding: 10px;
+
+        }
+    }
+}
+
+
+//  ============== services ============
+
+.services {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../img/servicesbg.jpg);
+    padding: 60px 0px;
+}
+.title{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(116, 56, 121);
+}
+.services__inner{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.services__item {
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    &-text{
+        opacity: .7;
+        line-height: 25px;
+    }
+}
+
+.services__item-img {
+
+    img {
+        height: 150px;
+        width: 150px;
     }
 }
 
@@ -127,6 +338,23 @@ html {
 
 
 
+//  ============== colladg ============
+
+.colladg__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .colladg__item {
+        height: 400px;
+        min-height: 100%;
+        width: 24.8%;
+        margin: 1px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
 
 
 
