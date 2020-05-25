@@ -32,12 +32,40 @@ $(function () {
   });
 
 
+  $('.master__slider').slick({
+    
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    easing: true,
+    cssEase: 'linear',
+    autoplay: true,
+    prevArrow: false,
+    nextArrow: false,
+
+  });
 
 
-  var nav = $('.header__menu-down');
+
+  $('.brend__slider').slick({
+    
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    easing: true,
+    cssEase: 'linear',
+    autoplay: true,
+    prevArrow: false,
+    nextArrow: false,
+
+  });
+
+
+
+  var nav = $('.header__down');
 
   $(window).scroll(function () {
-  	if ($(this).scrollTop() > 125) {
+  	if ($(this).scrollTop() > 154) {
   		nav.addClass("f-nav");
   	} else {
   		nav.removeClass("f-nav");
