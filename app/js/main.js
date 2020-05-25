@@ -61,6 +61,9 @@ $(function () {
   });
 
 
+  
+
+
 
   var nav = $('.header__down');
 
@@ -85,9 +88,6 @@ $(function () {
 
 
 
-
-
-
-
-
 });
+
+

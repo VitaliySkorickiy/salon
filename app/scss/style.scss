@@ -265,7 +265,7 @@ body {
 // ====   slider  ============
 
 .slider__item {
-    height: 700px;
+    height: 750px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -341,20 +341,20 @@ body {
     background-color: #f5abd773;
 
     .action__slider-item {
-        max-width: 370px;
+        max-width: 381px;
         text-align: center;
         background-color: #fff;
         padding-bottom: 20px;
         margin-right: 15px;
 
         .slider__img {
-            max-width: 370px;
-            height: 370px;
+            max-width: 381px;
+            height: 381px;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
 
-            a{
+            a {
                 width: 100%;
                 height: 100%;
             }
@@ -496,7 +496,8 @@ body {
             background-position: center;
             border-radius: 50%;
             border: 3px solid #f5abd7;
-            a{
+
+            a {
                 width: 100%;
                 height: 100%;
             }
@@ -565,7 +566,7 @@ body {
 .master__slider-item {
     display: flex !important;
     justify-content: space-between;
-    max-width: 550px;
+    max-width: 600px;
     color: #fff;
 }
 
@@ -578,10 +579,10 @@ body {
     background-position: center;
     border: 3px solid #f5abd7;
 
-    a{
+    a {
         min-width: 100%;
         height: 198px;
-        
+
     }
 }
 
@@ -617,18 +618,21 @@ body {
 .brend {
     padding: 60px 0px;
 
-    .slick-slide {
-        text-align: center;
-    }
-}
 
-.brend__slider-item {
-    max-width: 70%;
-    padding-bottom: 70%;
-    height: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    .slick-track {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    .brend__slider-item {
+        max-width: 200px;
+        height: 250px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
 }
 
 // ============  footer  ===============
@@ -643,22 +647,24 @@ body {
         color: #fff;
     }
 }
-.footer__inner{
+
+.footer__inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.footer__item{
+
+.footer__item {
     max-width: 23%;
     min-width: 23%;
 
-    &-title{
+    &-title {
         font-size: 23px;
         margin-bottom: 20px;
         position: relative;
 
-        &::before{
-            content:'_________';
+        &::before {
+            content: '_________';
             display: block;
             position: absolute;
             color: #f5abd7;
@@ -666,8 +672,9 @@ body {
 
         }
     }
-    &-list{
-        a{
+
+    &-list {
+        a {
             width: 50%;
             padding: 10px 0px;
             transition: all .3s;
@@ -678,34 +685,39 @@ body {
         }
     }
 
-    .tel, .contacts{
+    .tel,
+    .contacts {
         margin-bottom: 10px;
     }
-    .menu__up-soc{
+
+    .menu__up-soc {
         max-width: 180px;
 
-        ul{
+        ul {
             justify-content: space-between;
         }
-        li{
+
+        li {
             margin: 0;
         }
-        
-    }
-    .footer__item-insta{
 
-        ul{
+    }
+
+    .footer__item-insta {
+
+        ul {
             padding-top: 10px;
             display: flex;
             flex-wrap: wrap;
 
-            li{
+            li {
                 height: 65px;
                 width: 65px;
                 margin: 2px;
             }
         }
-        a{
+
+        a {
             min-width: 100%;
             padding-bottom: 100%;
             height: 0;
@@ -715,12 +727,6 @@ body {
         }
     }
 }
-
-
-    
-
-
-
 
 
 
