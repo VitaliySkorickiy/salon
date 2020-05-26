@@ -13,7 +13,35 @@ body {
     height: 100%;
     position: relative;
     font-family:'Roboto', sans-serif;
+    overflow-x: hidden;
 }
+
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    outline: none;
+}
+
+ul,
+li,
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
 
 // ==========================================
 
@@ -39,29 +67,6 @@ body {
 
 // ==========================================
 
-a {
-    display: inline-block;
-    text-decoration: none;
-    color: #000;
-}
-
-button {
-    outline: none;
-}
-
-ul,
-li,
-p, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
 
 
 // ======================================

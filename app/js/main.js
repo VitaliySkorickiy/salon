@@ -77,7 +77,7 @@ $(function () {
 
 
   $('.burger').on('click', function () {
-    $('.header__menu-down ul').slideToggle();
+    $('.menu__down-inner ul').slideToggle();
 
   });
 
