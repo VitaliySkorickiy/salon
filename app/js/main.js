@@ -29,11 +29,24 @@ $(function () {
     speed: 2000,
     prevArrow: false,
     nextArrow: false,
+    responsive: [{
+        breakpoint: 720,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   });
 
 
   $('.master__slider').slick({
-    
+
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -42,37 +55,61 @@ $(function () {
     autoplay: true,
     prevArrow: false,
     nextArrow: false,
-
+    responsive: [{
+      breakpoint: 550,
+      settings: {
+        slidesToShow: 1,
+      }
+    }, ]
   });
 
 
 
   $('.brend__slider').slick({
-    
+
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     easing: true,
     cssEase: 'linear',
-    autoplay: true,
+    // autoplay: true,
     prevArrow: false,
     nextArrow: false,
+    responsive: [{
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+   ]
 
   });
 
 
-  
+
 
 
 
   var nav = $('.header__down');
 
   $(window).scroll(function () {
-  	if ($(this).scrollTop() > 154) {
-  		nav.addClass("f-nav");
-  	} else {
-  		nav.removeClass("f-nav");
-  	}
+    if ($(this).scrollTop() > 154) {
+      nav.addClass("f-nav");
+    } else {
+      nav.removeClass("f-nav");
+    }
   });
 
 
@@ -89,5 +126,3 @@ $(function () {
 
 
 });
-
-
