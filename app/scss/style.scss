@@ -233,7 +233,7 @@ body {
 
 .f-nav {
     z-index: 9999;
-    position: fixed;
+    position: fixed !important;
     left: 0;
     top: 0;
     width: 100%;
@@ -558,6 +558,8 @@ body {
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bgslidermaster.jpg);
+    background-attachment: fixed;
+
 
     .title {
         color: #f5abd7;

@@ -72,7 +72,7 @@ $(function () {
     slidesToScroll: 1,
     easing: true,
     cssEase: 'linear',
-    // autoplay: true,
+    autoplay: true,
     prevArrow: false,
     nextArrow: false,
     responsive: [{
@@ -105,12 +105,13 @@ $(function () {
   var nav = $('.header__down');
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 154) {
-      nav.addClass("f-nav");
-    } else {
-      nav.removeClass("f-nav");
-    }
+  	if ($(this).scrollTop() > 154) {
+  		nav.addClass("f-nav");
+  	} else {
+  		nav.removeClass("f-nav");
+  	}
   });
+
 
 
   $('.burger').on('click', function () {
