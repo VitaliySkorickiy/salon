@@ -621,7 +621,7 @@ body {
     .iframe {
         width: 100%;
         height: auto;
-        margin: 0 auto; // выравнивает по центру по вертикали
+        margin: 0 auto;
         display: block;
         max-width: 500px;
     }
@@ -765,6 +765,39 @@ body {
         }
     }
 }
+
+// =============  404  ========================
+
+.img {
+    padding: 30px 0px 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    p {
+        display: block;
+        font-size: 250px;
+        font-weight: 700;
+        font-size: calc(30px + 220 *(100vw/1200));
+    }
+    span {
+        display: block;
+        font-size: 25px;
+        font-size: calc(14px + 11 *(100vw/1200));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

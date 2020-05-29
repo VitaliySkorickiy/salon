@@ -192,9 +192,21 @@
     min-height: 250px;
   }
 
+  .img404-text {
 
+    p {
 
+      font-size: calc(60px + (190 + 190 * 0.7) * ((100vw- 320px) / 1200));
+    }
 
+    span {
+      font-size: 25px;
+    }
+  }
+
+  .f-nav {
+    position: inherit !important;
+  }
 
 
 
