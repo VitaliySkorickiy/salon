@@ -99,9 +99,6 @@ $(function () {
 
 
 
-
-
-
   var nav = $('.header__down');
 
   $(window).scroll(function () {
@@ -118,6 +115,14 @@ $(function () {
     $('.menu__down-inner ul').slideToggle();
 
   });
+
+
+
+  $('.colladg__item').ripples({ 
+    resolution: 512, 
+    dropRadius: 20, //px 
+    perturbance: 0.04, 
+    }); 
 
 
 

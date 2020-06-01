@@ -241,12 +241,22 @@ body {
 
 
 .menu__btn {
+    border-radius: 8px;
+    box-shadow: 0 5px 0px rgb(116, 56, 121);
+    position: relative;
+    transition: .3s;
+    top: 0;
+
     a {
-        color: rgb(116, 56, 121);
+        border-radius: 8px;
         font-size: 18px;
         padding: 10px;
         background-color: #f5abd7;
-        border-radius: 8px;
+        color: rgb(116, 56, 121);
+    }
+    &:hover {
+        top: 2px;
+        box-shadow: 0 3px 0px rgb(116, 56, 121);
     }
 }
 
@@ -288,11 +298,20 @@ body {
     padding: 60px 0px;
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    position: relative;
 }
 
 .about__item {
     max-width: 30%;
     position: relative;
+    transition: all 1s;
+
+    &:hover{
+        box-shadow: 0px 0px 35px #f5abd7;
+        background-color: #fff;
+    }
+
 
     .img__title {
         position: absolute;
@@ -320,13 +339,16 @@ body {
         line-height: 25px;
         color: #000;
         opacity: .8;
-        padding: 5px;
+        padding: 10px 10px 50px 10px;
         min-height: 220px;
     }
 
     .about__item-btn {
         background-color: rgb(116, 56, 121);
         text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
 
         a {
             color: #fff;
@@ -349,6 +371,11 @@ body {
         padding-bottom: 20px;
         margin-right: 15px;
         margin-left: 15px;
+        overflow: hidden;
+
+        .slider-item-wrapper{
+            overflow: hidden;
+        }
 
         .slider__img {
             max-width: 481px;
@@ -357,16 +384,24 @@ body {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            transition: all 1s ease-out;
+           
+
+            &:hover {
+                transform: scale(1.05);
+                overflow: hidden;
+            }
 
             a {
                 width: 100%;
-                height: 100%;
+                height: 358px;
             }
         }
 
         .slider-content {
             min-height: 140px;
             padding: 10px;
+            z-index: 3;
 
             p {
                 font-size: 22px;
@@ -471,7 +506,6 @@ body {
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/price/bgprice.jpg);
-
 }
 
 .price__item {
@@ -485,6 +519,7 @@ body {
     margin-bottom: 60px;
     background-color: #f5abd718;
     border-radius: 8px;
+    position: relative;
 
     &-header {
         margin-bottom: 15px;
@@ -521,7 +556,6 @@ body {
                 font-weight: 700;
                 color: rgb(116, 56, 121);
             }
-
         }
     }
 
@@ -531,12 +565,15 @@ body {
         font-style: italic;
         margin-bottom: 20px;
         min-height: 120px;
-        padding: 0px 15px;
+        padding: 0px 15px 43px 15px;
     }
 
     &-btn {
         text-align: center;
         background-color: rgb(116, 56, 121);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
 
         a {
             color: #fff;
@@ -545,6 +582,11 @@ body {
             font-weight: 700;
             text-transform: uppercase;
             padding: 10px 0px;
+            transition: all 1s;
+
+            &:hover{
+                letter-spacing: 3px;
+            }
         }
     }
 }
@@ -766,6 +808,110 @@ body {
     }
 }
 
+
+// ==============  popup  ==================
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s ease 0s;
+
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+}
+
+.popup__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    background-color: rgb(255, 227, 232);
+    color: #000;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px 30px 0px 30px;
+    position: relative;
+    transition: all .8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+
+    form {
+
+        div {
+            margin-bottom: 20px;
+
+            p {
+                font-size: 20px;
+                margin-bottom: 10px;
+                margin-top: 25px;
+            }
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            min-height: 35px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+            font-style: italic;
+
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: rgb(116, 56, 121);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+
+
+
+
 // =============  404  ========================
 
 .img {
@@ -775,12 +921,14 @@ body {
     background-position: center;
     text-align: center;
     color: #fff;
+
     p {
         display: block;
         font-size: 250px;
         font-weight: 700;
         font-size: calc(30px + 220 *(100vw/1200));
     }
+
     span {
         display: block;
         font-size: 25px;
