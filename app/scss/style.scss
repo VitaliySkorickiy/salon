@@ -326,6 +326,7 @@ body {
         padding: 10px;
         font-size: 20px;
         top: 277px;
+        z-index: 2;
     }
 
     &-img {
@@ -352,12 +353,8 @@ body {
     .about__item-btn a {
         text-align: center;
         position: absolute;
-        bottom: 0;
+        bottom: -4px;
         width: 100%;
-
-
-        height: 2.5em;
-        line-height: 2.5em;
         vertical-align: middle;
         text-shadow: 0 -1px 1px #777;
         color: #fff;
@@ -365,6 +362,7 @@ body {
         border-radius: 5px;
         box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, .1em .1em .2em #800;
         background: linear-gradient(#faa4d8, #fa97d2 48%, #fd84cd 52%, #fb70c4);
+        padding: 9px;
     }
 
     .about__item-btn a:active {
